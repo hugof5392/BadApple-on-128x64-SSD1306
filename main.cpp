@@ -12,6 +12,7 @@
 #define SCREEN_ADDRESS 0x3C
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
+int frames_speed = 20; // Change this value to adjust the frame per second of the video
 
 const uint8_t* const video[] PROGMEM = {
     fotograma0,
@@ -1133,8 +1134,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+// Nothing to see
 }
 
 #define FRAME_SIZE 1024
@@ -1149,7 +1149,7 @@ void play() {
     display.clearDisplay();
     display.drawBitmap(0,0,frameBuffer,128,64,SSD1306_WHITE);
     display.display();
-    delay(50);
+    delay(frames_speed);
   }
 };
 
