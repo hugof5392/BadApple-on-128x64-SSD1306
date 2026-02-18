@@ -12,7 +12,7 @@
 #define SCREEN_ADDRESS 0x3C
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-int frames_speed = 20; // Change this value to adjust the frame per second of the video
+int frames_speed = 65; // Change this value to adjust the frame per second of the video
 
 const uint8_t* const video[] PROGMEM = {
     fotograma0,
@@ -1134,7 +1134,8 @@ void setup() {
 }
 
 void loop() {
-// Nothing to see
+  // put your main code here, to run repeatedly:
+
 }
 
 #define FRAME_SIZE 1024
